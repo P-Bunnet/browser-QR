@@ -1,7 +1,7 @@
 /*global chrome*/
 import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import QrScanner from "qr-scanner";
 function App() {
   const [id, setID] = useState();
@@ -14,9 +14,7 @@ function App() {
       setID(tabs[0].id);
     });
   }
-  useEffect(() => {
-    test2();
-  }, []);
+
   function test2() {
     chrome.tabs.captureVisibleTab(
       null,
@@ -49,9 +47,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* <button onClick={test}>Send alert</button>
+      <button onClick={test}>Send alert</button>
       <div>{id}</div>
-      <button onClick={test2}>Send message</button> */}
+      <button onClick={test2}>Send message</button>
       <div>{message}</div>
     </div>
   );
