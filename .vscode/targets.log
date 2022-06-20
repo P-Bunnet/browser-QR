@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 20 15:59:08 2022
+# Make data base, printed on Mon Jun 20 16:49:23 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-91f04951-863e-40b2-9bb0-08dbb3dc32fd.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-baac38d0-7597-4c34-a3fd-e968fe740032.sock
 # environment
 MANDATORY_PATH = /usr/share/gconf/pop.mandatory.path
 # environment
@@ -93,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 44835
+VSCODE_PID = 74789
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -186,7 +186,7 @@ MAKE_VERSION := 4.3
 # environment
 MANAGERPID = 2419
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 44835
+GIO_LAUNCHED_DESKTOP_FILE_PID = 74789
 # environment
 _ = /usr/share/code/code
 # environment
@@ -241,6 +241,7 @@ GDMSESSION = pop
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-06-20 10:37:50.793835567
 #  File has been updated.
 #  Successfully updated.
@@ -285,7 +286,6 @@ build:
 	@cp -r build/* dist
 	@echo 'Renaming files...' 
 	@mv dist/index.html dist/popup.html
- 
 	@echo 'Zipping up build files for upload...'
 	@zip -r -X latestBuild.zip dist/*
 	@echo 'New extension build ready for upload!' 
@@ -310,6 +310,6 @@ build:
 # strcache performance: lookups = 33 / hit rate = 30%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Mon Jun 20 15:59:08 2022
+# Finished Make data base on Mon Jun 20 16:49:23 2022
 
  
