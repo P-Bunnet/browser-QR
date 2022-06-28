@@ -9,6 +9,20 @@
   color: white;
 }
 
+.btn {
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-copy {
+  height: 45px;
+  padding: 0px;
+  font-size: 10px;
+  cursor: pointer;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+}
+
 
 
 .header {
