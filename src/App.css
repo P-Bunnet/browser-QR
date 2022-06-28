@@ -1,21 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +9,91 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.start {
+  padding-left: 10px;
+  font-size: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: inline-block;
+}
+.end1,
+.middle1,
+.middle2 {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.25em;
+}
+.end2 {
+  position: absolute;
+  color: #ff6a00;
+}
+.middle1,
+.middle2 {
+  color: #cfcfcf;
+}
+.middle1 {
+  animation: ani1 5s infinite;
+  animation-delay: -3s;
+  max-width: 0;
+}
+.middle2 {
+  animation: ani2 5s infinite;
+  animation-delay: -3s;
+  max-width: 0;
+}
+
+@keyframes ani1 {
+  0% {
+    max-width: 500px;
   }
-  to {
-    transform: rotate(360deg);
+
+  25% {
+    max-width: 0;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  90% {
+    max-width: 500px;
+  }
+
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes ani2 {
+  0% {
+    max-width: 0;
+  }
+
+  25% {
+    max-width: 0;
+  }
+
+  50% {
+    max-width: 500px;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  100% {
+    max-width: 0;
   }
 }

@@ -1,9 +1,9 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/bunnet/Documents/browser-QR'
+make: Entering directory '/home/kenji/browser-QR'
 
 	--- Run this command to prepare the build for upload ---
 	make build
 
 exit 0
-make: Leaving directory '/home/bunnet/Documents/browser-QR'
+make: Leaving directory '/home/kenji/browser-QR'
  
