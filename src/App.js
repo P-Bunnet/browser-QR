@@ -17,7 +17,8 @@ function App() {
           </h1>
         </div>
 
-          <button className="btn" type="">
+        <div className="btn">
+          <button  type="">
             <svg
               className="btn-copy"
               xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +34,7 @@ function App() {
               />
             </svg>
           </button>
+        </div>
       </div>
       <div className="App-header">
         <h1></h1>
