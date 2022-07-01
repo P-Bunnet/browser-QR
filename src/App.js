@@ -1,8 +1,61 @@
 /*global chrome*/
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect, useState } from "react";
+import QrScanner from "qr-scanner";
+import QRCode from "qrcode";
 
 function App() {
+  const [image, setImage] = useState();
+  const [message, setMessage] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  useEffect(async () => {
+    if (message == "") {
+      getQRcodeFromScreen();
+    }
+    generateQR();
+  }, [message]);
+  function getQRcodeFromScreen() {
+    chrome.tabs.captureVisibleTab(
+      null,
+      { format: "png" /* png, jpeg */, quality: 80 },
+      function (dataUrl) {
+        if (dataUrl) {
+          // Grab successful
+          QrScanner.scanImage(dataUrl)
+            .then(async (result) => {
+              setMessage(result);
+              setErrorMsg("");
+            })
+            .catch((err) => {
+              setErrorMsg(err);
+              console.log(
+                err || "no QR code found, Would you like to refresh ?"
+              );
+            });
+        } else {
+          // Grab failed, warning
+          // To handle issues like permissions - https://github.com/folletto/Blipshot/issues/9
+          alert(
+            "I'm sorry.\n\nIt seems the extension wasn't able to grab the screenshot of the active tab. Error: " +
+              chrome.runtime.lastError.message +
+              "\n\n"
+          );
+          return false;
+        }
+      }
+    );
+  }
+  function generateQR() {
+    QRCode.toDataURL(message)
+      .then((url) => {
+        console.log(url);
+        setImage(url);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
   return (
     <div className="">
       <div className="header">
@@ -15,10 +68,20 @@ function App() {
             </span>
             <span class="end2">R</span>
           </h1>
+          <div>{errorMsg}</div>
+          <input
+            defaultValue={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          ></input>
+          <button onClick={getQRcodeFromScreen}>Refresh</button>
+          <img src={image}></img>
+          <button onClick={generateQR}>Generate QR Code</button>
         </div>
 
         <div className="btn">
-          <button  type="">
+          <button type="">
             <svg
               className="btn-copy"
               xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +100,7 @@ function App() {
         </div>
       </div>
       <div className="App-header">
+        <p></p>
         <h1></h1>
       </div>
     </div>

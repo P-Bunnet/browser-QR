@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun 28 14:27:56 2022
+# Make data base, printed on Fri Jul  1 09:08:05 2022
 
 # Variables
 
@@ -21,13 +21,11 @@ GNOME_SHELL_SESSION_MODE = pop
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
-SNAP_INSTANCE_KEY = 
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-4d3348ed-ecb3-4a67-91f3-0858098f8251.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b759302e-71da-4ca1-a3d0-0dbd0d01c6ca.sock
 # environment
 MANDATORY_PATH = /usr/share/gconf/pop.mandatory.path
 # environment
-VSCODE_CWD = /home/kenji/browser-QR
+VSCODE_CWD = /home/bunnet/Documents/browser-QR
 # environment
 WINDOWPATH = 2
 # default
@@ -37,23 +35,15 @@ QT_ACCESSIBILITY = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-SNAP_INSTANCE_NAME = code
-# environment
-GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/kenji/browser-QR
+PWD = /home/bunnet/Documents/browser-QR
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-XDG_DATA_DIRS = /usr/share/pop:/usr/share/gnome:/home/kenji/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-OLDPWD = /home/kenji
+XDG_DATA_DIRS = /usr/share/pop:/usr/share/gnome:/home/bunnet/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -61,7 +51,7 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/kenji/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /home/bunnet/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LANG = C
 # environment
@@ -71,15 +61,17 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.147
+GNOME_TERMINAL_SERVICE = :1.120
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/kenji/browser-QR
+CURDIR := /home/bunnet/Documents/browser-QR
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -96,22 +88,18 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-pop:/etc/xdg
 XDG_SESSION_DESKTOP = pop
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
-# environment
-SNAP_REEXEC = 
 # automatic
 @F = $(notdir $@)
 # environment
-ZSH = /home/kenji/.oh-my-zsh
-# environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 15905
+VSCODE_PID = 10225
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/2039,unix/pop-os:/tmp/.ICE-unix/2039
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/2548,unix/pop-os:/tmp/.ICE-unix/2548
 # automatic
 *F = $(notdir $*)
 # environment
@@ -135,31 +123,23 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/5cf1ee73_b55f_41b7_a6e7_57bd7554d5fd
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/8cc85682_d4fa_4048_a5f4_6dc8ada43e97
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-SNAP_COOKIE = KSr4X-v4aoa_t8ei4yamlsaF0OllU-JH10LCPAk9OF0eLWmO64ix
-# environment
-PATH = /home/kenji/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+PATH = /home/bunnet/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # default
 MAKEFILES := 
 # automatic
 ^F = $(notdir $^)
 # environment
-SNAP_USER_COMMON = /home/kenji/snap/code/common
-# environment
-SNAP = /snap/code/99
-# environment
-SNAP_REVISION = 99
-# environment
-SNAP_REAL_HOME = /home/kenji
-# environment
 VSCODE_LOG_NATIVE = false
 # environment
-USERNAME = kenji
+USERNAME = bunnet
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -171,25 +151,21 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 # automatic
 +F = $(notdir $+)
 # environment
-LESS = -R
-# environment
 DESKTOP_SESSION = pop
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = pop:GNOME
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-LOGNAME = kenji
-# environment
-SNAP_ARCH = amd64
+LOGNAME = bunnet
 # makefile
 .DEFAULT_GOAL := help
 # environment
-SYSTEMD_EXEC_PID = 7229
+SYSTEMD_EXEC_PID = 10152
 # environment
-DISPLAY = :0
+DISPLAY = :1
 # environment
-USER = kenji
+USER = bunnet
 # environment
 GTK_MODULES = gail:atk-bridge:appmenu-gtk-module
 # makefile (from 'Makefile', line 29)
@@ -204,13 +180,7 @@ DEFAULTS_PATH = /usr/share/gconf/pop.default.path
 # default
 MAKE_VERSION := 4.3
 # environment
-DISABLE_WAYLAND = 1
-# environment
-SNAP_DATA = /var/snap/code/99
-# environment
-SNAP_CONTEXT = KSr4X-v4aoa_t8ei4yamlsaF0OllU-JH10LCPAk9OF0eLWmO64ix
-# environment
-PAGER = less
+_ = /usr/bin/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -218,31 +188,23 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 COLORTERM = truecolor
 # environment
-GDK_PIXBUF_MODULE_FILE = /home/kenji/snap/code/common/.cache/gdk-pixbuf-loaders.cache
-# environment
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /home/kenji
+HOME = /home/bunnet
 # environment
 QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-6825b48c-1.68.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-6c7bf85c-1.68.1-main.sock
 # environment
 TERM = xterm-256color
-# environment
-SNAP_NAME = code
-# environment
-GSETTINGS_SCHEMA_DIR = /snap/code/99/usr/share/glib-2.0/schemas
 # default
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
-# environment
-SNAP_VERSION = 30d9c6cd
 # default
 SUFFIXES := 
 # environment
@@ -251,20 +213,14 @@ VSCODE_CLI = 1
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VTE_VERSION = 6800
-# environment
-SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# environment
-SNAP_USER_DATA = /home/kenji/snap/code/99
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = pop
-# environment
-SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=123/1024=12%, Rehash=0, Collisions=13/153=8%
+# Load=101/1024=10%, Rehash=0, Collisions=11/131=8%
 
 # Pattern-specific Variable Values
 
@@ -272,7 +228,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 64769, inode 25185268): 16 files, no impossibilities.
+# . (device 2051, inode 9066980): 16 files, no impossibilities.
 
 # 16 files, no impossibilities in 1 directories.
 
@@ -285,7 +241,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-20 16:37:07.287532926
+#  Last modified 2022-06-20 10:37:50.793835567
 #  File has been updated.
 #  Successfully updated.
 
@@ -327,6 +283,7 @@ build:
 	yarn build
 	@mkdir -p dist
 	@cp -r build/* dist
+ 
 	@echo 'Renaming files...' 
 	@mv dist/index.html dist/popup.html
 	@echo 'Zipping up build files for upload...'
@@ -353,6 +310,6 @@ build:
 # strcache performance: lookups = 33 / hit rate = 30%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Tue Jun 28 14:27:56 2022
+# Finished Make data base on Fri Jul  1 09:08:05 2022
 
  

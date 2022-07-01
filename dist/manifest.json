@@ -6,9 +6,9 @@
   "background": {
     "service_worker": "./background.js"
   },
-  "permissions": [],
+  "permissions": ["tabs", "activeTab", "scripting"],
   "author": "Bunnet Phoung",
-
+  "host_permissions": ["http://*/", "https://*/"],
   "short_name": "b-QR",
   "action": {
     "default_popup": "popup.html",
