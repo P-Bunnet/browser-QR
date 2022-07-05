@@ -8980,10 +8980,10 @@
   "resolved" "https://registry.npmjs.org/q/-/q-1.5.1.tgz"
   "version" "1.5.1"
 
-"qr-scanner@^1.4.1":
-  "integrity" "sha512-xiR90NONHTfTwaFgW/ihlqjGMIZg6ExHDOvGQRba1TvV+WVw7GoDArIOt21e+RO+9WiO4AJJq+mwc5f4BnGH3w=="
-  "resolved" "https://registry.npmjs.org/qr-scanner/-/qr-scanner-1.4.1.tgz"
-  "version" "1.4.1"
+"qr-scanner@^1.4.0":
+  "integrity" "sha512-/WGS0Vf39G/AEKslmE4EGevoYhhbX2iX4tsFp9dT0wtHJgKlCPk2vCXOJr8HnCICyj4TJS6GRmUUGjBf8AUEHA=="
+  "resolved" "https://registry.npmjs.org/qr-scanner/-/qr-scanner-1.4.0.tgz"
+  "version" "1.4.0"
   dependencies:
     "@types/offscreencanvas" "^2019.6.4"
 

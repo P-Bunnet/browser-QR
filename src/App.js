@@ -1,16 +1,16 @@
 /*global chrome*/
-import './App.css';
-import { useEffect, useState } from 'react';
-import QrScanner from 'qr-scanner';
-import QRCode from 'qrcode';
-import CopyToClipboard from 'react-copy-to-clipboard';
+import "./App.css";
+import { useEffect, useState } from "react";
+import QrScanner from "qr-scanner";
+import QRCode from "qrcode";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 function App() {
   const [image, setImage] = useState();
-  const [message, setMessage] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
+  const [message, setMessage] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
   useEffect(async () => {
-    if (message === '') {
+    if (message === "") {
       getQRcodeFromScreen();
     }
     generateQR();
@@ -18,14 +18,14 @@ function App() {
   function getQRcodeFromScreen() {
     chrome.tabs.captureVisibleTab(
       null,
-      { format: 'png' /* png, jpeg */, quality: 80 },
+      { format: "png" /* png, jpeg */, quality: 80 },
       function (dataUrl) {
         if (dataUrl) {
           // Grab successful
           QrScanner.scanImage(dataUrl)
             .then(async (result) => {
               setMessage(result);
-              setErrorMsg('');
+              setErrorMsg("");
             })
             .catch((err) => {
               setErrorMsg(err);
@@ -34,7 +34,7 @@ function App() {
           alert(
             "I'm sorry.\n\nIt seems the extension wasn't able to grab the screenshot of the active tab. Error: " +
               chrome.runtime.lastError.message +
-              '\n\n'
+              "\n\n"
           );
           return false;
         }
@@ -45,6 +45,25 @@ function App() {
     QRCode.toDataURL(message).then((url) => {
       setImage(url);
     });
+  }
+  function downloadImage(src) {
+    const img = new Image();
+    img.crossOrigin = "anonymous"; // This tells the browser to request cross-origin access when trying to download the image data.
+    // ref: https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image#Implementing_the_save_feature
+    img.src = src;
+    img.onload = () => {
+      // create Canvas
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      // create a tag
+      const a = document.createElement("a");
+      a.download = "download.png";
+      a.href = canvas.toDataURL("image/png");
+      a.click();
+    };
   }
   return (
     <div>
@@ -95,7 +114,13 @@ function App() {
       </div>
       <div className="errortext">{errorMsg}</div>
       <div className="">
-        <img src={image}></img>
+        <img
+          className="qr-image"
+          src={image}
+          onClick={() => {
+            downloadImage(image);
+          }}
+        ></img>
       </div>
     </div>
   );
