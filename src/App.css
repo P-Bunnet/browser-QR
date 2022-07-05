@@ -57,13 +57,13 @@
   color: #cfcfcf;
 }
 .middle1 {
-  animation: ani1 5s infinite;
-  animation-delay: -3s;
+  animation: ani1 7s infinite;
+  animation-delay: -2s;
   max-width: 0;
 }
 .middle2 {
-  animation: ani2 5s infinite;
-  animation-delay: -3s;
+  animation: ani2 7s infinite;
+  animation-delay: -2s;
   max-width: 0;
 }
 
@@ -109,4 +109,43 @@
   100% {
     max-width: 0;
   }
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1ch;
+  width: 70%;
+}
+.errortext {
+  color: red;
+  font-size: 16px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.inline {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.input {
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 14px 20px;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
 }
