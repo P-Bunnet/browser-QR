@@ -9,7 +9,7 @@ function App() {
   const [image, setImage] = useState();
   const [message, setMessage] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  useEffect(async () => {
+  useEffect(() => {
     if (message === "") {
       getQRcodeFromScreen();
     }
@@ -23,18 +23,17 @@ function App() {
         if (dataUrl) {
           // Grab successful
           QrScanner.scanImage(dataUrl)
-            .then(async (result) => {
+            .then((result) => {
               setMessage(result);
               setErrorMsg("");
             })
             .catch((err) => {
+              console.log(err);
               setErrorMsg(err);
             });
         } else {
-          alert(
-            "I'm sorry.\n\nIt seems the extension wasn't able to grab the screenshot of the active tab. Error: " +
-              chrome.runtime.lastError.message +
-              "\n\n"
+          setErrorMsg(
+            "We're sorry. the request is exceed the MAX_CAPTURE_VISIBLE_TAB_CALLS_PER_SECOND quota..  \n let try again after a few seconds"
           );
           return false;
         }
@@ -108,7 +107,12 @@ function App() {
           }}
         ></input>
 
-        <button className="button" onClick={getQRcodeFromScreen}>
+        <button
+          className="button"
+          onClick={() => {
+            getQRcodeFromScreen();
+          }}
+        >
           Refresh
         </button>
       </div>
